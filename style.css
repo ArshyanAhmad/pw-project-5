@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #b5da23;
+    --secondary-color: #c7c2c2;
+    --bg-color: #111827;
+    --bg-secondary-color: #080c14;
+    --white-color: #fff;
+    --black-color: #000;
+    --li-border-color: #555;
+
+    --transition-1: 300ms ease;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    height: 200vh;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* **********************
+    #HEADER SECTION 
+************************* */
+.header {
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--white-color);
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.open-menu i {
+    font-size: 45px;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navlist {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navlist li {
+    list-style: none;
+}
+
+.navlist li a {
+    color: var(--white-color);
+    font-size: 17px;
+    transition: var(--transition-1);
+    text-decoration: none;
+}
+
+.navlist li a:hover {
+    color: var(--primary-color);
+}
+
+/* close and open menu display none */
+.close-menu,
+.open-menu {
+    display: none;
+}
+
+
+
+/* **********************
+    #HERO SECTION 
+************************* */
+
+.hero {
+    padding: 60px 0;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+
+.left-hero h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.left-hero h1 {
+    font-size: 50px;
+    padding: 20px 0 10px 0;
+    color: var(--white-color);
+    letter-spacing: 2px;
+}
+
+.left-hero p {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.right-hero {
+    width: 70%;
+}
+
+.right-hero img {
+    width: 100%;
+}
+
+
+/* **********************
+    #PROJECT SECTION 
+************************* */
+.project__section {
+    padding-top: 110px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 40px;
+    display: block;
+    text-decoration: underline;
+    color: var(--white-color);
+    text-decoration-color: var(--primary-color);
+}
+
+.projects {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.project {
+    text-align: center;
+    width: 450px;
+    padding: 15px;
+}
+
+.project h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: var(--primary-color);
+}
+
+.project img {
+    width: 100%;
+}
+
+/* **********************
+    #CONTACT SECTION 
+************************* */
+
+.contact__section {
+    padding: 3rem 5rem;
+}
+
+.contacts {
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    border-radius: 50%;
+    place-items: center;
+    background-color: var(--bg-secondary-color);
+    transition: var(--transition-1);
+}
+
+.contact:hover {
+    cursor: pointer;
+    background-color: #b5da23;
+    box-shadow: 0 0 10px #b8e014;
+}
+
+.contact:hover i {
+    color: var(--bg-secondary-color);
+}
+
+.contact i {
+    font-size: 20px;
+    color: var(--white-color);
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero .container {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    .left-hero {
+        padding-left: 1rem;
+    }
+
+    .right-hero {
+        width: 55vw;
+        padding-bottom: 90px;
+        margin: auto;
+    }
+
+    .left-hero h4 {
+        font-size: 35px;
+    }
+
+    .left-hero h1 {
+        font-size: 70px;
+    }
+
+    .left-hero p {
+        font-size: 22px;
+    }
+
+
+    .heading {
+        font-size: 25px;
+    }
+
+    .projects {
+        gap: 20px;
+    }
+
+    .project {
+        width: 300px;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .project__section {
+        padding-top: 20px;
+    }
+
+    .open-menu {
+        display: block;
+        padding-top: 20px;
+    }
+
+    .header {
+        padding: 0.5rem 1rem;
+    }
+
+    .close-menu {
+        position: fixed;
+        left: 1.2rem;
+        top: 1.5rem;
+        background-color: var(--bg-secondary-color);
+        width: 45px;
+        height: 45px;
+        display: none;
+        place-items: center;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(221, 213, 213, 0.322);
+    }
+
+    .close-menu i {
+        color: var(--white-color);
+        font-size: 30px;
+    }
+
+    .close-menu.active {
+        display: grid;
+    }
+
+    .navlist {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 80%;
+        height: 100vh;
+        align-items: flex-start;
+        padding: 5rem 1.5rem;
+        right: -500px;
+        top: 0;
+        background-color: var(--bg-secondary-color);
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(192, 184, 184, 0.082);
+        transition: var(--transition-1);
+    }
+
+    .navlist.active {
+        right: 0;
+    }
+
+    .navlist li {
+        width: 100%;
+        padding: 0.8rem 0 1rem .5rem;
+        border-bottom: 0.5px solid var(--li-border-color);
+    }
+
+    .navlist li a {
+        color: var(--secondary-color);
+        font-size: 17px;
+    }
+
+}
+
+
+@media only screen and (max-width: 550px) {
+
+    .left-hero h4 {
+        font-size: 22px;
+    }
+
+    .left-hero h1 {
+        font-size: 35px;
+    }
+
+    .left-hero p {
+        font-size: 16px;
+    }
+}
