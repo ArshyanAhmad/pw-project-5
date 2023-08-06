@@ -9,7 +9,7 @@
 }
 
 :root {
-    --primary-color: #b5da23;
+    --primary-color: rgb(34, 20, 226);
     --secondary-color: #c7c2c2;
     --bg-color: #111827;
     --bg-secondary-color: #080c14;
@@ -46,23 +46,6 @@ body {
     justify-content: space-between;
 }
 
-.logo {
-    width: 35px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-}
-
-.logo span {
-    color: var(--white-color);
-    font-size: 35px;
-    font-weight: 500;
-}
-
-.logo img {
-    width: 100%;
-}
 
 .open-menu i {
     font-size: 45px;
@@ -72,11 +55,15 @@ body {
 .navbar {
     display: flex;
     align-items: center;
+    position: relative;
+    width: 100%;
 }
 
 .navlist {
     display: flex;
     align-items: center;
+    position: absolute;
+    right: 20px;
     gap: 30px;
 }
 
@@ -87,12 +74,14 @@ body {
 .navlist li a {
     color: var(--white-color);
     font-size: 17px;
+    padding: 5px;
     transition: var(--transition-1);
     text-decoration: none;
+    border-radius: 5px;
 }
 
 .navlist li a:hover {
-    color: var(--primary-color);
+    background-color: rgb(92, 20, 226);
 }
 
 /* close and open menu display none */
@@ -132,7 +121,7 @@ body {
 
 .left-hero p {
     font-size: 16px;
-    color: var(--primary-color);
+    color: #b5da23;
     font-weight: 600;
 }
 
@@ -179,7 +168,7 @@ body {
 .project h2 {
     font-size: 20px;
     text-transform: capitalize;
-    color: var(--primary-color);
+    color: var(--white-color);
 }
 
 .project img {
@@ -214,12 +203,12 @@ body {
 
 .contact:hover {
     cursor: pointer;
-    background-color: #b5da23;
-    box-shadow: 0 0 10px #b8e014;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
 }
 
 .contact:hover i {
-    color: var(--bg-secondary-color);
+    color: var(--white-color);
 }
 
 .contact i {
